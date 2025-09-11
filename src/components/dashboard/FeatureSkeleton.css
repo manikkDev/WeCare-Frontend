@@ -1,0 +1,833 @@
+/* Feature Skeleton Styles */
+.feature-skeleton {
+  padding: 2rem;
+  animation: skeletonFadeIn 0.8s ease-out;
+}
+
+@keyframes skeletonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Skeleton Elements */
+.skeleton-title {
+  height: 32px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  width: 300px;
+  margin-bottom: 0.5rem;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-subtitle {
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  width: 200px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Skeleton Header */
+.skeleton-header {
+  margin-bottom: 2rem;
+  animation: slideInFromTop 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skeleton Content */
+.skeleton-content {
+  animation: slideInFromBottom 0.6s ease-out 0.4s both;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skeleton Cards */
+.skeleton-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skeleton-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: cardSlideIn 0.6s ease-out both;
+}
+
+.skeleton-card-1 { animation-delay: 0.1s; }
+.skeleton-card-2 { animation-delay: 0.2s; }
+.skeleton-card-3 { animation-delay: 0.3s; }
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.skeleton-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-card-title {
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  flex: 1;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.skeleton-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-line-long { width: 100%; animation-delay: 0.1s; }
+.skeleton-line-medium { width: 75%; animation-delay: 0.2s; }
+.skeleton-line-short { width: 50%; animation-delay: 0.3s; }
+
+/* Skeleton Stats */
+.skeleton-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skeleton-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: statSlideIn 0.6s ease-out both;
+}
+
+.skeleton-stat-item:nth-child(1) { animation-delay: 0.2s; }
+.skeleton-stat-item:nth-child(2) { animation-delay: 0.3s; }
+.skeleton-stat-item:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes statSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton-stat-value {
+  width: 60px;
+  height: 32px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-stat-label {
+  width: 80px;
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+/* OCR Skeleton Specific */
+.ocr-skeleton .skeleton-upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  animation: uploadAreaSlideIn 0.6s ease-out 0.3s both;
+}
+
+@keyframes uploadAreaSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skeleton-upload-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 50%;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-upload-text {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.skeleton-upload-button {
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.skeleton-results {
+  animation: resultsSlideIn 0.6s ease-out 0.5s both;
+}
+
+@keyframes resultsSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skeleton-result-title {
+  width: 150px;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-result-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skeleton-action-button {
+  width: 80px;
+  height: 32px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skeleton-text-line {
+  height: 18px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-line-1 { width: 100%; animation-delay: 0.1s; }
+.skeleton-line-2 { width: 95%; animation-delay: 0.2s; }
+.skeleton-line-3 { width: 85%; animation-delay: 0.3s; }
+.skeleton-line-4 { width: 90%; animation-delay: 0.4s; }
+.skeleton-line-5 { width: 70%; animation-delay: 0.5s; }
+
+/* Reports Skeleton Specific */
+.reports-skeleton .skeleton-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skeleton-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.skeleton-search-bar {
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-filter-button {
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.skeleton-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: tableSlideIn 0.6s ease-out 0.4s both;
+}
+
+@keyframes tableSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton-table-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.skeleton-table-header-cell {
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-table-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  animation: rowSlideIn 0.4s ease-out both;
+}
+
+.skeleton-row-1 { animation-delay: 0.1s; }
+.skeleton-row-2 { animation-delay: 0.2s; }
+.skeleton-row-3 { animation-delay: 0.3s; }
+.skeleton-row-4 { animation-delay: 0.4s; }
+.skeleton-row-5 { animation-delay: 0.5s; }
+
+@keyframes rowSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skeleton-table-cell {
+  height: 18px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+/* Analytics Skeleton Specific */
+.skeleton-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skeleton-metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: metricSlideIn 0.6s ease-out both;
+}
+
+.skeleton-metric-1 { animation-delay: 0.1s; }
+.skeleton-metric-2 { animation-delay: 0.2s; }
+.skeleton-metric-3 { animation-delay: 0.3s; }
+.skeleton-metric-4 { animation-delay: 0.4s; }
+
+@keyframes metricSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.skeleton-metric-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-metric-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton-metric-value {
+  width: 80px;
+  height: 28px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-metric-label {
+  width: 100px;
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.skeleton-metric-change {
+  width: 60px;
+  height: 14px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.skeleton-charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.skeleton-chart-large,
+.skeleton-chart-small {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: chartSlideIn 0.6s ease-out both;
+}
+
+.skeleton-chart-large { animation-delay: 0.2s; }
+.skeleton-chart-small { animation-delay: 0.3s; }
+
+@keyframes chartSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skeleton-chart-title {
+  width: 150px;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-chart-legend {
+  display: flex;
+  gap: 1rem;
+}
+
+.skeleton-legend-item {
+  width: 80px;
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-chart-area {
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.3s;
+}
+
+.skeleton-chart-small .skeleton-chart-area {
+  height: 150px;
+}
+
+/* Appointments Skeleton Specific */
+.appointments-skeleton .skeleton-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skeleton-add-button {
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-calendar {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: calendarSlideIn 0.6s ease-out 0.3s both;
+}
+
+@keyframes calendarSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skeleton-month-nav {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-month-title {
+  width: 150px;
+  height: 28px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.skeleton-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.skeleton-day-header {
+  height: 30px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-day-cell {
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-upcoming {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: upcomingSlideIn 0.6s ease-out 0.5s both;
+}
+
+@keyframes upcomingSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skeleton-upcoming-header {
+  margin-bottom: 1rem;
+}
+
+.skeleton-upcoming-title {
+  width: 200px;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  animation: appointmentSlideIn 0.4s ease-out both;
+}
+
+.skeleton-appointment-1 { animation-delay: 0.1s; }
+.skeleton-appointment-2 { animation-delay: 0.2s; }
+.skeleton-appointment-3 { animation-delay: 0.3s; }
+
+@keyframes appointmentSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skeleton-appointment-time {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-appointment-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton-appointment-title {
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeleton-appointment-doctor {
+  width: 150px;
+  height: 16px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.skeleton-appointment-location {
+  width: 120px;
+  height: 14px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.skeleton-appointment-status {
+  width: 80px;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 12px;
+  animation: skeletonShimmer 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skeleton-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .skeleton-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .skeleton-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .skeleton-charts {
+    grid-template-columns: 1fr;
+  }
+  
+  .reports-skeleton .skeleton-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .skeleton-actions {
+    justify-content: stretch;
+  }
+  
+  .skeleton-search-bar {
+    flex: 1;
+  }
+  
+  .appointments-skeleton .skeleton-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-skeleton {
+    padding: 1rem;
+  }
+  
+  .skeleton-title {
+    width: 200px;
+  }
+  
+  .skeleton-subtitle {
+    width: 150px;
+  }
+  
+  .skeleton-card {
+    padding: 1rem;
+  }
+  
+  .skeleton-table-header,
+  .skeleton-table-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

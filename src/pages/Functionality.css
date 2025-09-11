@@ -1,0 +1,28 @@
+.functionality-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.functionality-content {
+  flex: 1;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .functionality-content {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .functionality-page {
+    min-height: 100vh;
+  }
+}

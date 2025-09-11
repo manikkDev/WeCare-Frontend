@@ -1,0 +1,227 @@
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.wecare-logo {
+  height: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 8px rgba(102, 126, 234, 0.2));
+}
+
+.logo-container:hover .wecare-logo {
+  filter: drop-shadow(0 4px 16px rgba(102, 126, 234, 0.3));
+}
+
+/* Size variants */
+.logo-container.small .wecare-logo {
+  width: 80px;
+}
+
+.logo-container.medium .wecare-logo {
+  width: 120px;
+}
+
+.logo-container.large .wecare-logo {
+  width: 160px;
+}
+
+/* Logo background animation */
+.logo-bg {
+  transition: all 0.4s ease;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
+  }
+}
+
+/* Cross symbol animation */
+.cross-symbol {
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .cross-symbol {
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Heart symbol animation */
+.heart-symbol {
+  transform-origin: center;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+}
+
+/* DNA helix animation */
+.dna-helix {
+  animation: rotate 4s linear infinite;
+  transform-origin: 34px 20px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text animations */
+.logo-text-we, .logo-text-care {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover .logo-text-we {
+  fill: #667eea;
+  transform: translateY(-1px);
+}
+
+.logo-container:hover .logo-text-care {
+  filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
+  transform: translateY(-1px);
+}
+
+.logo-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-container:hover .logo-subtitle {
+  opacity: 1;
+}
+
+/* Decorative dots animation */
+.decorative-dots .dot-1 {
+  animation: float 2s ease-in-out infinite;
+}
+
+.decorative-dots .dot-2 {
+  animation: float 2s ease-in-out infinite 0.5s;
+}
+
+.decorative-dots .dot-3 {
+  animation: float 2s ease-in-out infinite 1s;
+}
+
+.decorative-dots .dot-4 {
+  animation: float 2s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Shield animation */
+.shield-outline {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: drawShield 3s ease-in-out infinite;
+}
+
+@keyframes drawShield {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 60;
+  }
+}
+
+.checkmark {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  animation: drawCheck 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  30% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-container.medium .wecare-logo {
+    width: 100px;
+  }
+  
+  .logo-container.large .wecare-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container.medium .wecare-logo {
+    width: 90px;
+  }
+  
+  .logo-container.large .wecare-logo {
+    width: 100px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .wecare-logo {
+    filter: contrast(1.2);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .logo-bg,
+  .heart-symbol,
+  .dna-helix,
+  .decorative-dots circle,
+  .shield-outline,
+  .checkmark {
+    animation: none;
+  }
+  
+  .logo-container:hover {
+    transform: none;
+  }
+}
