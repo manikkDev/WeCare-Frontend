@@ -318,7 +318,7 @@ ${text}`;
         return;
       }
 
-      const response = await fetch('http://localhost:5000/api/ocr/save-report', {
+      const response = await fetch(`${API_BASE_URL}/api/ocr/save-report`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
